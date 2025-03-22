@@ -3,23 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First GitHub Page</title>
-    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Swaraj Dhage - DevOps & System Administrator Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to My GitHub Page</h1>
-        <p>This is my first GitHub Pages website!</p>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Swaraj Dhage</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experience">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero bg-primary text-white text-center py-5">
+        <div class="container">
+            <h1 class="display-4">Hi, I'm Swaraj Dhage</h1>
+            <p class="lead">DevOps & System Administrator</p>
+        </div>
     </header>
 
-    <main>
-        <button id="changeColorButton">Change Background Color</button>
-    </main>
+    <!-- About Me Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>About Me</h2>
+                    <p>I am a DevOps and System Administrator with extensive experience in managing and optimizing IT infrastructure, system upgrades, and deployments. I specialize in cloud services, automation, CI/CD pipelines, and system security.</p>
+                    <p>Skilled in supporting development teams, maintaining high availability of production servers, and implementing security protocols across the network.</p>
+                </div>
+                <div class="col-md-6">
+                    <img src="images/profile.jpg" alt="Swaraj Dhage" class="img-fluid rounded-circle">
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <footer>
-        <p>Created with 💻 by <strong>Your Name</strong></p>
+    <!-- Experience Section -->
+    <section id="experience" class="bg-light py-5">
+        <div class="container">
+            <h2>Work Experience</h2>
+            <h5><strong>DevOps Associate | SmartData Enterprises</strong> - Feb 2023 to Sep 2023</h5>
+            <p><strong>Responsibilities:</strong></p>
+            <ul>
+                <li>Installed and troubleshot Ubuntu/Windows OS for optimal performance.</li>
+                <li>Managed AWS EC2, S3, VPC, CloudWatch, and IAM services.</li>
+                <li>Created and maintained Jenkins/GitLab CI/CD pipelines for automated deployments.</li>
+                <li>Configured network services such as VPN, DNS, DHCP, and Firewall management.</li>
+                <li>Automated tasks using Python and Bash scripts to streamline operations.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-5">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>EKG_consult Project</h4>
+                    <p>Managed and deployed a Python-based EKG consultation platform with secure automated deployment pipelines using Jenkins and GitHub.</p>
+                    <a href="https://sdeiaiml.com:9003/atc_reader" class="btn btn-primary">View Project</a>
+                </div>
+                <div class="col-md-6">
+                    <h4>Handyman Project</h4>
+                    <p>Developed and managed a platform connecting customers with service providers, involving multiple APIs and MongoDB databases.</p>
+                    <a href="http://54.201.160.69:9203/" class="btn btn-primary">View Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-dark text-white py-5">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <p><strong>Email:</strong> dhageswaraj1000@gmail.com</p>
+            <p><strong>Phone:</strong> +91 9764916374</p>
+            <p><strong>Location:</strong> Amravati, India</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2025 Swaraj Dhage. All rights reserved.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- Bootstrap JS and custom JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

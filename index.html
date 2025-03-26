@@ -1,36 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Swaraj Dhage - DevOps & System Administrator Portfolio</title>
+    <meta name="description" content="Swaraj Dhage's DevOps & System Administrator portfolio showcasing expertise in cloud infrastructure, automation, security, and more.">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+
+    <!-- FontAwesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css"> <!-- Add your custom CSS file here -->
+
+    <style>
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 100%;
+            position: relative;
+            overflow-y: auto;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Full Page Particle Background */
+        #particles-js {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+
+.hero {
+    background-color: transparent; /* Make the background transparent */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 2px 2px 10px rgba(0, 255, 153, 0.3);
+    position: relative; /* Make sure content stays on top */
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Add a dark overlay for better text visibility */
+    z-index: -1; /* Keep the overlay behind the content */
+}
+
+
+        /* Mobile font size adjustment */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+
+        /* Highlight sections */
+        .highlight {
+            font-weight: bold;
+            color: #ffcc00;
+        }
+
+        .btn-social {
+            margin-right: 15px;
+        }
+
+        /* Contact Section Styling */
+        .contact {
+            padding: 60px 0;
+            /* background-color: #212121; */
+            background-color: transparent;
+        }
+
+        .contact h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        /* .contact-links {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        } */
+
+        .contact-links a {
+            color: #fff;
+            text-decoration: none;
+            margin: 10px 0;
+            font-size: 1.2rem;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .contact-links a:hover {
+            color: #00ff99;
+            transform: scale(1.1);
+        }
+
+        .contact-links i {
+            margin-right: 8px;
+        }
+
+        .contact-links .crossed-out {
+            color: #888;
+            text-decoration: line-through;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #212121;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        /* Section styling */
+        section {
+            position: relative;
+            z-index: 1; /* Ensure content is in front of the particles */
+            padding: 60px 0;
+        }
+
+          /* Lead text styling */
+    .hero .lead {
+        font-size: 2rem; /* Increase font size */
+        font-weight: 500; /* Slightly bolder weight for a more polished look */
+        text-transform: uppercase; /* Make it uppercase for emphasis */
+        color: #00ff99; /* Soft neon green color to make it stand out */
+        text-shadow: 1px 1px 10px rgba(0, 255, 153, 0.5); /* Add subtle shadow to make it pop */
+        letter-spacing: 2px; /* Add letter spacing to improve readability */
+        margin-top: 20px; /* Add space between the name and designation */
+    }
+
+    </style>
 </head>
+
 <body>
 
+    <!-- Skip to main content link -->
+    <a href="#main-content" class="visually-hidden-focusable">Skip to main content</a>
+
+    <!-- Full Page Particle Background -->
+    <div id="particles-js"></div>
+
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#">Swaraj Dhage</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
+                        <a class="nav-link smooth-scroll" href="#about">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#experience">Experience</a>
+                        <a class="nav-link smooth-scroll" href="#education">Education</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#projects">Projects</a>
+                        <a class="nav-link smooth-scroll" href="#skills">Skills</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
+                        <a class="nav-link smooth-scroll" href="#experience">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link smooth-scroll" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link smooth-scroll" href="#contact">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -38,35 +197,84 @@
     </nav>
 
     <!-- Hero Section -->
-    <header class="hero bg-primary text-white text-center py-5">
+    <header class="hero text-white text-center py-5">
         <div class="container">
             <h1 class="display-4">Hi, I'm Swaraj Dhage</h1>
             <p class="lead">DevOps & System Administrator</p>
+            <a href="#about" class="btn btn-light btn-lg smooth-scroll">Learn More</a>
         </div>
     </header>
 
     <!-- About Me Section -->
-    <section id="about" class="py-5">
-        <div class="container">
-            <div class="row">
+    <section id="about" class="py-5" id="main-content">
+        <div class="container text-center">
+            <h2 class="highlight">About Me</h2>
+            <div class="row align-items-center">
                 <div class="col-md-6">
-                    <h2>About Me</h2>
-                    <p>I am a DevOps and System Administrator with extensive experience in managing and optimizing IT infrastructure, system upgrades, and deployments. I specialize in cloud services, automation, CI/CD pipelines, and system security.</p>
-                    <p>Skilled in supporting development teams, maintaining high availability of production servers, and implementing security protocols across the network.</p>
+                    <p>I am an adept <span class="highlight">DevOps & System Administrator</span> with a passion for optimizing infrastructure and automating deployment pipelines to scale operations in a seamless and secure manner. With hands-on expertise in modern cloud environments, networking, and automation, I ensure systems remain robust, highly available, and agile to meet the evolving demands of business and technology landscapes.</p>
+                    <p>My experience spans both supporting development teams and enhancing production environments, making me a key player in every stage of the application lifecycle. I am driven by the challenge of solving complex problems and enhancing system security while reducing downtime.</p>
                 </div>
                 <div class="col-md-6">
-                    <img src="images/profile.jpg" alt="Swaraj Dhage" class="img-fluid rounded-circle">
+                    <img src="profile.jpg" alt="Swaraj Dhage" class="img-fluid rounded-circle shadow-lg" loading="lazy">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="bg-light py-5">
+    <!-- Education Section -->
+    <section id="education" class="py-5">
         <div class="container">
-            <h2>Work Experience</h2>
-            <h5><strong>DevOps Associate | SmartData Enterprises</strong> - Feb 2023 to Sep 2023</h5>
-            <p><strong>Responsibilities:</strong></p>
+            <h2 class="highlight text-center">Education</h2>
+            <div class="row">
+                <div class="col-md-12">
+                    <h5>Master of Computer Applications (MCA)</h5>
+                    <p><strong class="highlight">Institution:</strong> P. R. Pote Patil College of Engineering & Management</p>
+                    <p><strong class="highlight">Duration:</strong> 2021 - 2023</p>
+                    <p>Specialized in systems architecture, cloud computing, and automation. Developed projects in DevOps, system administration, and networking, ensuring robust infrastructure and cloud security.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-5">
+        <div class="container">
+            <h2 class="highlight text-center">Skills</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4 class="highlight">Infrastructure & Cloud Services</h4>
+                    <ul>
+                        <li>OS: Ubuntu, Windows</li>
+                        <li>Cloud Platforms: Amazon AWS (EC2, S3, CloudWatch, IAM, VPC, CloudFront)</li>
+                        <li>Web Servers: Nginx, Apache2, IIS</li>
+                        <li>Networking: DHCP, DNS, VLANs, Firewalls</li>
+                    </ul>
+                    <h4 class="highlight">Automation & CI/CD</h4>
+                    <ul>
+                        <li>Configuration Management: Ansible</li>
+                        <li>CI/CD Pipelines: Jenkins, GitLab CI/CD</li>
+                        <li>Scripting: Python, Bash</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h4 class="highlight">Security & Monitoring</h4>
+                    <ul>
+                        <li>Multi-Factor Authentication (MFA)</li>
+                        <li>Version Control: GIT, GitHub, GitLab</li>
+                        <li>Monitoring: Nagios, Prometheus, Grafana</li>
+                        <li>Security: SSL, Encryption, VPN, IDS</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Experience Section -->
+     <section id="experience" class="py-5">
+        <div class="container">
+            <h2 class="highlight text-center">Work Experience</h2>
+            <h3><strong class="highlight">DevOps Associate | SmartData Enterprises</strong> - Feb 2023 to Present</h3>
+            <p><strong class="highlight">Responsibilities:</strong></p>
             <ul>
                 <li>Installed and troubleshot Ubuntu/Windows OS for optimal performance.</li>
                 <li>Managed AWS EC2, S3, VPC, CloudWatch, and IAM services.</li>
@@ -80,16 +288,16 @@
     <!-- Projects Section -->
     <section id="projects" class="py-5">
         <div class="container">
-            <h2>Projects</h2>
+            <h2 class="highlight text-center">Projects</h2>
             <div class="row">
                 <div class="col-md-6">
                     <h4>EKG_consult Project</h4>
-                    <p>Managed and deployed a Python-based EKG consultation platform with secure automated deployment pipelines using Jenkins and GitHub.</p>
+                    <p>A Python-based application designed to facilitate EKG consultations with a secure, automated deployment pipeline.</p>
                     <a href="https://sdeiaiml.com:9003/atc_reader" class="btn btn-primary">View Project</a>
                 </div>
                 <div class="col-md-6">
                     <h4>Handyman Project</h4>
-                    <p>Developed and managed a platform connecting customers with service providers, involving multiple APIs and MongoDB databases.</p>
+                    <p>A full-stack application connecting customers with service providers. This project involved multiple APIs and a MongoDB database for the backend services.</p>
                     <a href="http://54.201.160.69:9203/" class="btn btn-primary">View Project</a>
                 </div>
             </div>
@@ -97,23 +305,137 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="bg-dark text-white py-5">
-        <div class="container">
-            <h2>Contact Me</h2>
-            <p><strong>Email:</strong> dhageswaraj1000@gmail.com</p>
-            <p><strong>Phone:</strong> +91 9764916374</p>
-            <p><strong>Location:</strong> Amravati, India</p>
+    <section id="contact" class="contact">
+        <h2 class="highlight">Get in Touch</h2>
+        <p class="text-center">Feel free to reach out to me for collaboration, consulting, or any questions!</p>
+        <div class="contact-links">
+            <a href="https://github.com/Swarajdhage" target="_blank" class="github">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="www.linkedin.com/in/swaraj-dhage-aa48ba356" target="_blank" class="linkedin">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="mailto:dhageswaraj1000@gmail.com" class="email">
+                <i class="fas fa-envelope"></i> Email
+            </a>
+            <a href="tel:+91 9764916374" class="phone">
+                <i class="fas fa-phone"></i> Phone
+            </a>
+            <a href="https://www.instagram.com/swarajdhage69?igsh=MXRlb2RrZzhteXVzMA==" target="_blank" class="instagram">
+                <i class="fab fa-instagram"></i> Instagram
+            </a>
+            <!-- <a href="https://www.facebook.com" target="_blank" class="facebook">
+                <i class="fab fa-facebook"></i> Facebook
+            </a> -->
+            <a href="#" class="crossed-out" title="facebook (Not Available)">
+                <i class="fab fa-facebook"></i> Facebook
+            </a>
+            <a href="https://wa.me/9764916374" target="_blank" class="whatsapp">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            <!-- </a>
+            <a href="https://twitter.com" target="_blank" class="twitter">
+                <i class="fab fa-twitter"></i> Twitter
+            </a> -->
+            <a href="#" class="crossed-out" title="Twitter (Not Available)">
+                <i class="fab fa-twitter"></i> Twitter
+            </a>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-3">
-        <p>&copy; 2025 Swaraj Dhage. All rights reserved.</p>
+    <footer>
+        <p>&copy; 2025 Swaraj Dhage. All Rights Reserved.</p>
     </footer>
 
-    <!-- Bootstrap JS and custom JS -->
+    <!-- Bootstrap JS & Particles JS -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+    <script>
+        // Initialize particles.js to cover the entire page
+        particlesJS("particles-js", {
+            particles: {
+                number: {
+                    value: 100, // More particles for a dense, chaotic look
+                    density: {
+                        enable: true,
+                        value_area: 800
+                    }
+                },
+                color: {
+                    value: "#00ff00", // Neon green as the base color
+                },
+                shape: {
+                    type: "circle", // Keep it simple with circular particles
+                    stroke: {
+                        width: 0,
+                        color: "#00ff00" // Use the same green for strokes
+                    }
+                },
+                opacity: {
+                    value: 0.6, // Slightly lower opacity for a glowing effect
+                    random: true,
+                    anim: {
+                        enable: true,
+                        speed: 2,
+                        opacity_min: 0.1,
+                        sync: false
+                    }
+                },
+                size: {
+                    value: 4, // Larger particles to make them stand out more
+                    random: true,
+                    anim: {
+                        enable: true,
+                        speed: 6,
+                        size_min: 0.1,
+                        sync: false
+                    }
+                },
+                line_linked: {
+                    enable: true,
+                    distance: 120, // Shorter distance between linked particles
+                    color: "#00ff00", // Keep the links green
+                    opacity: 0.8, // Increased opacity for a brighter glow on lines
+                    width: 2, // Thicker lines for the links
+                },
+                move: {
+                    enable: true,
+                    speed: 3, // Faster particle speed for more dynamic movement
+                    direction: "random", // Allow particles to move in random directions
+                    random: true,
+                    straight: false,
+                    out_mode: "out",
+                    bounce: false
+                }
+            },
+            interactivity: {
+                events: {
+                    onhover: {
+                        enable: true,
+                        mode: "repulse" // Add repulse effect when hovering over particles
+                    },
+                    onclick: {
+                        enable: true,
+                        mode: "push" // Add more particles when clicking on the page
+                    }
+                },
+                modes: {
+                    repulse: {
+                        distance: 100,
+                        duration: 0.4
+                    },
+                    push: {
+                        particles_nb: 4
+                    }
+                }
+            },
+            retina_detect: true
+        });
+    </script>
+    
+    
 </body>
+
 </html>

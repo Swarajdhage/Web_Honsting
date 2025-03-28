@@ -405,6 +405,104 @@ h2 {
     }
 }
 
-
-
-
+  /* Use CSS Variables for easier theme management */
+  :root {
+    --primary-color: #ff416c;
+    --secondary-color: #ff4b2b;
+    --tertiary-color: #ff8e00;
+    --quaternary-color: #ff0080;
+    --quinary-color: #6a11cb;
+    --bg-color: #f4f4f4;
+    --text-color: #333;
+    --btn-radius: 50px;
+  }
+    
+  /* Download Button Styling with Enhanced Multi-Color Gradient */
+  .download-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 30px;
+    font-size: 18px;
+    color: white;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color), var(--tertiary-color), var(--quaternary-color), var(--quinary-color));
+    background-size: 400% 400%;
+    text-decoration: none;
+    border-radius: var(--btn-radius);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: background-position 0.5s, transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+    animation: gradientShift 4s linear infinite, neonPulse 2s ease-in-out infinite;
+    cursor: pointer;
+  }
+  
+  /* Icon Styling */
+  .download-btn i {
+    margin-right: 10px;
+    font-size: 20px;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Hover and Active Effects */
+  .download-btn:hover {
+    background-position: 100% 100%;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 255, 153, 0.4), 0 0 60px rgba(255, 0, 204, 0.3);
+    filter: brightness(1.2);
+  }
+  
+  .download-btn:active {
+    background-position: 0% 0%;
+    transform: translateY(2px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    filter: brightness(1);
+  }
+  
+  /* Neon Pulse Animation */
+  @keyframes neonPulse {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.4), 0 0 30px rgba(255, 255, 255, 0.3);
+    }
+    50% {
+      transform: scale(1.1);
+      box-shadow: 0 0 40px rgba(0, 255, 153, 0.8), 0 0 60px rgba(255, 0, 204, 0.6);
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.4), 0 0 30px rgba(255, 255, 255, 0.3);
+    }
+  }
+  
+  /* Gradient Animation */
+  @keyframes gradientShift {
+    0% {
+      background-position: 0% 0%;
+    }
+    50% {
+      background-position: 100% 0%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .container {
+      padding: 15px;
+    }
+  
+    h1 {
+      font-size: 28px;
+    }
+  
+    p {
+      font-size: 16px;
+    }
+  
+    .download-btn {
+      font-size: 16px;
+      padding: 12px 25px;
+    }
+  }
+  
